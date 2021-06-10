@@ -14,3 +14,18 @@ body{
     background-position: left center;
     background-repeat: no-repeat;
 }
+
+button{
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    font-family: 'Courier New', courier ,monospace;
+}
+/* Media Queries  : Tablet or smaller */
+@media  screen and (max-width: 1000px) {
+    .container{
+        background-position: center center;
+        background-size: cover;
+    }
+}

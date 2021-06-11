@@ -41,5 +41,5 @@ async function getJokes() {
     }
 }
 
-//test();
-getJokes();
+// Event Listeners
+button.addEventListener("click", getJokes);

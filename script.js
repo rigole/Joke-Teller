@@ -5,11 +5,18 @@ const audioElement = document.getElementById('audio');
 
 //Get jokes from API
 async function getJokes() {
+    let joke = '';
     const urlApi = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist';
     try {
         const  response = await fetch(urlApi);
         const data = await response.json();
-        console.log(data);
+        if (data.setup){
+            joke = `${data.setup} ... ${data.delivery}`;
+        }
+        else{
+            joke =  data.joke;
+        }
+        console.log(joke);
     }catch (e) {
         console.log("Whoops",e);
     }
